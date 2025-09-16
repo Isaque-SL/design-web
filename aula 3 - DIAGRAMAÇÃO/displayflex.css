@@ -1,0 +1,22 @@
+header, footer{
+    /*  formatará os dois seletores */
+    padding: 2rem;
+    margin: 2rem 0;
+    background-color: antiquewhite;
+    text-align: center;
+}
+main{
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* espaçamento SOMENTE entre eles, portanto, não espaçamento entre */
+    flex-wrap: wrap;
+}
+    main > section{
+    /* o sinal de > formatará o filho direto da marcação, ou seja, não formatará qualquer tag que não seja diretamente vinculada a ela, como tags dentro de outras tags dentro da tag mãe. */
+    width: 20rem;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 0 0.5rem 0.05rem rgb(236, 236, 236);
+}

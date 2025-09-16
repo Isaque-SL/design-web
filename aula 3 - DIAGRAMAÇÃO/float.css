@@ -1,0 +1,22 @@
+figure{
+    float: right; /* permite que os elementos que estão abaixo fiquem ao lado (ARRODEANDO) */
+}
+figure img{
+    width: 360px;
+}
+section.card-flutuante{
+    float: left;
+    border: 1px solid black;
+    padding: 1rem;
+    margin-right: 20px;
+}
+section.card-flutuante a{
+    text-decoration: none;
+    color: black;
+}
+footer{
+    background-color: antiquewhite;
+    clear: both;
+    /* o atributo clear "limpa" a página dos elementos flutuantes. Deixa o footer embaixo dos elementos flutuantes, não transpassando-os. */
+    text-align: center;
+}
