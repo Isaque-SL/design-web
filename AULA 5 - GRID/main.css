@@ -1,0 +1,56 @@
+main{
+    display: grid;
+    /* assim como no flex, o grid
+    deve ser definido no container */
+    gap: 1rem;
+    grid-template-columns: 1fr 2fr 1fr;
+    /* a quantidade de valores equivale a quantidade de LINHAS
+    no 'grid-template-areas' */
+    /* a quantidade de valores equivale a quantidade
+    de valores no 'grid-template-areas' */
+    /* fr é a unidade de FRAÇÃO */
+    grid-template-rows: 2 rem rem;
+    /* a quantidade de valores equivale a quantidade de LINHAS
+    no 'grid-template-areas' */
+    /* Cuidado ao definir a altura das linhas,
+    porque o conteúdo pode ser maior quea a área disponível */
+    grid-template-areas: 
+    "a a d"
+    "b c d";
+    /* 1 - PRECISO COLOCAR TODAS AS TAGS DENTRO DO MAIN (FILHOS DO GRID)
+        DENTRO DO GRID-TEMPLATE-AREAS;
+       2 - NÃO POSSO FAZER MESCLAGEM DIAGONAL
+       3 - para espaço vazio, usar ponto */
+}
+header{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: antiquewhite;
+    padding: 1.25rem;
+    margin: 1em;
+}
+section{
+    border: 1px solid black;
+    padding: 1rem;
+    text-align: center;
+    overflow: auto;
+}
+
+section.noticias{
+    grid-area: a; /* a definição  de variável
+    para cada área do grid é obrigatória*/
+    
+}
+section.comemoracao{
+    grid-area: b;
+}
+section.orgainzadores{
+    grid-area: c;
+}
+section.corrida{
+    grid-area: d;
+}
+
+body{
+    background-color: whitesmoke;
+}
