@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header, footer, section{
+    padding: 2rem;
+    margin: 0 0 2rem 0;
+    background-color: rgb(250, 235, 215);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 0.8rem;
+}
+body{
+    background-color: whitesmoke;
+}
+main{
+    margin-top: 7rem; /* como o header ficou sobreposto, o main precisa ter um
+    espaçamento em cima */
+}
+header, footer{
+    top: 0;
+    background-color: rgb(223, 214, 192);
+    text-align: center;
+}
+header{
+    position: fixed;
+    /* o position fixed deixa a marcação FIXA na sua posição, a marcação "perde" a largura
+    muda o comportamento para display: inline-block*/
+    width: 100vw;
+    margin-top: 0;
+    z-index: 1;
+}
+div#banner{
+    position: absolute; /* O posicionamento absoluto permite que o elemento fique sobreposto
+    diferentemente do FIXED ele irá seguir a rolagem do scroll */
+    background: rgba(255, 231, 200, 0.89);
+    padding: 2rem;
+    width: 20rem;
+    height: 20rem;
+    z-index: 3; /* equivale ao eixo Z. recebe um valor inteiro que representa sua
+    ordem de camadas/sequencia...... */
+    /* top: ;
+       left: ;
+       right: ;
+       bottom: ; */
+       /* As coordenadas irão posicionar o elemento, escolher apenas 2: eixo x e eixo y.
+       Ao trabalhar com posionamento NÃO se trabalhar com MARGIN!!! */
+}
+div#esmaecer{
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+div h2{
+    position: relative;
+    /* permite que o elemento HTML possa sobrepor outros elementos sem perder sua área */
+    top: 30px;
+    font-size: xx-large;
+    z-index: auto;
+}
