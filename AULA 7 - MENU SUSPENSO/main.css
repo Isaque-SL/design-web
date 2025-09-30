@@ -1,0 +1,41 @@
+ body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
+    margin: 0;
+ }
+header{
+    background-color: blanchedalmond;
+    padding: 10px;
+    text-align: center;
+}
+ol > li{
+    display: inline;
+    position: relative;
+}
+li{
+    list-style-type: none;
+}
+ol li > a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 1rem;
+    vertical-align: middle;
+    /* Alinhamento vertical entre o texto e a imagem */
+    height: 1.5rem;
+}
+li>ul{
+    position: absolute;
+    padding: 1rem;
+    background-color: rgba(224, 208, 179, 0.986);
+    top: 20px;
+    left: 0;
+    /* por padrão, as coordenadas são em relação ao body. Porém, se o elemento pai tiver um position relative, 
+    ele ficará em relação à posição do pai*/
+    visibility: hidden;
+    /* Por padrão, o submenu ficará ESCONDIDO!  */
+
+}
+li:hover ul{
+    /* "Quando passar o mouse no <li> o <ul> se tornará visível */
+    visibility: visible;
+}
