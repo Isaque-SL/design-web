@@ -1,0 +1,21 @@
+body{
+    margin: 0;
+
+}
+header{
+    background-color: rgb(174, 174, 243);
+    text-align: center;
+}
+form{
+    border: 1px solid black;
+    height: fit-content;
+    width: fit-content;
+    padding: 1em;
+}
+label[for]{
+    /* Seleciona as marcações de label com
+    o atributo de for definido */
+    display: inline-block;
+    width: 12rem;
+    vertical-align: top;
+}
