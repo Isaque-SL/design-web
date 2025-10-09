@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <!--  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Halloween</title>
+</head>
+<body>
+    <header>
+        <h1>Halloween CNAT 2025</h1>
+    </header>
+    <div id="destaque">
+        <!-- 1- tag para responsividade de imagens, diferente da figure, que abraça as imagens como um contâiner
+             2 - marcação de source maiores em cima | podem haver várias marcações
+             3 - pode ser colocada em h1, lista... -->
+        <picture>
+            <source srcset="imagens/destaque-desktop.jpg" media="(min-width:1440px)" />
+            <source srcset="imagens/destaque-ipad_pro.jpg" media="(min-width:1000px)" />
+            <source srcset="imagens/destaque-ipad_mini.jpg" media="(min-width:650px)" />
+            <img src="imagens/destaque-mobile.jpg" alt="Imagem de destaque ...">
+        </picture>    
+    </div>
+    <main>
+        <section>
+            <h1>História</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, autem animi eaque nam recusandae consequuntur reiciendis veritatis obcaecati enim vitae. Quam nesciunt et eius nihil recusandae magnam harum expedita amet?</p>
+        </section>
+        <section>
+            <h1>Ritos</h1>
+            <p>Culpa, ut eveniet ea commodi vitae fugit, eos expedita consequuntur minima deleniti optio libero eius ratione. Sed blanditiis suscipit quia cupiditate voluptatibus alias excepturi ea. Voluptatem possimus reiciendis distinctio accusamus?</p>
+        </section>
+        <section>
+            <h1>Eventos</h1>
+            <p>Molestias temporibus assumenda pariatur possimus ullam consequuntur accusamus blanditiis veniam soluta, eum repudiandae placeat, deserunt iure suscipit vitae sint nesciunt rem dolor nostrum impedit consectetur harum quis. Adipisci, deserunt temporibus?</p>
+        </section>
+        <section>
+            <h1>Saiba mais</h1>
+            <p>Ab ut pariatur sit. Natus, odio tempore necessitatibus, neque quibusdam dolores consequuntur sed magnam voluptate eaque recusandae sunt incidunt dolore doloribus accusamus voluptatibus nam ex tenetur iusto enim optio perferendis.</p>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por IFRN</p>
+    </footer>
+</body>
+</html>

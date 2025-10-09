@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+    /* este atributo NÃO ALTERA A LARGURA ao se colocar o padding */
+}
+
+main{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+section{
+    border: 1px solid black;
+    padding: 2rem;
+    flex-basis: 20%;
+}
+@media (max-width: 1440px){
+    body{
+        background-color: antiquewhite;
+    }
+    section{
+        flex-basis: 90%;
+    }
+}
+@media (max-width: 1000px){
+    body{
+        background-color: antiquewhite;
+    }
+
+}
+@media (max-width: 650px){
+    body{
+        background-color: antiquewhite;
+    }
+}
