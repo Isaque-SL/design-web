@@ -1,0 +1,37 @@
+
+
+section{
+    padding: 3rem;
+    background-color: antiquewhite;
+    margin: 2rem;
+}
+section p{
+    animation-name: mostrar;
+    /* animation-name carrega atributos variáveis, portanto, você define. */
+    animation-duration: 2s;
+    /* Segundos ou milissegundos 'ms' */
+    animation-delay: 2ms;
+    animation-iteration-count: infinite; /* POR FAVOR NUNCA USE ISSO AAAAAA */
+}
+
+@keyframes mostrar{
+    /* 
+    - posso usar em várias marcações
+    - é possível fragmentar em várias porcentagens */
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    50%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    75%{
+        opacity: 0;
+        transform: translateX((-100px));
+    }
+    100%{
+        opacity: 0;
+        trasnform: translateX(0px);
+    }
+}

@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Hegarty&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    /* seletor onde declaramos */
+    --tx-color: gray;
+    --bg-color: cornflowerblue;
+}
+/* Design System - sistema de padronização de formatação */
+body{
+    background-color: var(--bg-color); /*  */
+    font-family: "Roboto Condensed", sans-serif;
+    /*  */
+}
+
+p.destaque{
+    /* seleciona todas as tags p com class destaque */
+}
+
+.destaque{
+    /* seleciona todas as tags, sem distinção, com class destaque */
+}
+
+section#principal{
+    /* seleciona a com id "principal" que esteja dentro de um section */
+}
+
+#principal{
+    /* seleciona a tag com id principal */
+}
+
+.verde.tx-laranja{
+    /* seleciona a marcação que tem os dois valores no atributo de class
+    'verde' */
+}
+
+.verde .tx-laranja{
+    /* seleciona as marcações que tem a class 'tx-laranja' que estão dentro da
+    marcação com class 'verde'*/
+}
+
+ol, ul{
+    /* formata ol e ul */
+}
+
+p > b{
+    /* formata a tag de b que está IMEDIATAMENTE após o p */
+}
+
+h2 + p{
+    width: fit-content;
+    background-color: #fefefe;
+    /* formata todo parágrafo que está imediatamente depois do h2 */
+}
+
+p:hover{
+    /* hover é uma subclasse que vai permitir o efeito de passar o mouse */
+}
+
+li:first-child{
+    /* ele vai selecionar o primeiro filho desse grupo */
+}
+
+tr:last-child{
+
+}
+
+tr:nth-child(2){
+    /* odd : ímpar - even : par 
+       número inteiro
+       equação
+       qualquer coisa que represente um número inteiro no final
+        nth = enésimo (item que está na posição N) 
+       */
+
+}
+
+img[src='face.png']{
+
+}
+input[type='radio']{
+
+}
+label[for]{
+
+}
