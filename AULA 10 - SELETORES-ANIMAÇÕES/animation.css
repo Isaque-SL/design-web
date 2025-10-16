@@ -31,7 +31,7 @@ section p{
         transform: translateX((-100px));
     }
     100%{
-        opacity: 0;
-        trasnform: translateX(0px);
+        opacity: 1;
+        trasnform: translateX(100px);
     }
 }

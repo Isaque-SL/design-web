@@ -1,0 +1,101 @@
+<!-- Fazer uma página com menu, colocar efeito de transição nos itens, filter e transform. -->
+ <!DOCTYPE html>
+ <html lang="pt-br">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgb(26, 23, 23);
+        }
+        header{
+            padding: 2rem;
+            background-color: orange;
+            text-align: center;
+        }
+        main{
+            display: inline-block;
+            justify-content: space-between;
+        }
+        section{
+            width: 20rem;
+            height: 20rem;
+            border: 1px solid rgb(255, 255, 255);
+            padding: 1em;
+            box-sizing: border-box;
+            transition: all 0.4s ease-in-out;
+            transition-property: border-radius, box-shadow;
+        }
+        section:hover{
+            box-shadow: 0 0 10px 0 rgb(255, 255, 255);
+            border-radius: 10px;
+            p{
+                text-decoration: underline;
+            }
+        }
+        ol{
+            list-style-type: none;
+        }
+        a{
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+    </style>
+    <title>Halloween</title>
+ </head>
+ <body>
+    <header>
+        <h1>Halloween!</h1>
+    </header>
+    <main>
+        <nav>
+            <ol>
+                <li>
+                    <a href="">
+                        <section>
+                            <h2>História</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, laboriosam est. Impedit, libero repudiandae! Doloremque, eius nesciunt. Optio, quaerat libero neque minima et, dolores quas non distinctio aliquid delectus alias.</p>
+                        </section>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <section>
+                            <h2>Eventos</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, nulla vero esse aspernatur cum ullam neque dolorum sed, consectetur blanditiis repudiandae saepe nisi ipsa ab maxime inventore vitae fugit culpa?</p>
+                        </section>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <section>
+                            <h2>Monstros</h2>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam dolorum consequatur, nemo dolore esse sed quaerat nam architecto molestiae repudiandae ex repellendus. Repellat enim voluptates quo temporibus ducimus molestiae distinctio.</p>
+                        </section>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <section>
+                            <h2>Relatos</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quae odio doloribus quos possimus nemo nostrum quas ex dolorem deserunt, natus recusandae deleniti. Corrupti distinctio at, numquam rem voluptate facere.</p>
+                        </section>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <section>
+                            <h2>Obras famosas</h2>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos omnis deleniti neque numquam provident alias quia facere iure optio quos? Aliquam saepe eveniet iusto voluptate quam cupiditate at autem porro?</p>
+                        </section>
+                    </a>
+                </li>
+            </ol>
+        </nav>
+    </main>
+ </body>
+ </html>

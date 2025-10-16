@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: antiquewhite !important;
+    /* comando que aumenta a importância do atributo */
+    background-color: azure;
+}
+header{
+    padding: 1em;
+    text-align: center;
+}
+
+main{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+section{
+    width: 20rem;
+    height: 20rem;
+    border: 1px solid black;
+    padding: 1em;
+    box-sizing: border-box;
+    transition: all 0.4s ease-in-out;
+    transition-property: border-radius, box-shadow;
+    /* o atributo de transition cria uma transição suave do efeito de hover */
+    /* você pode colocar o valor para todos os atributos do hover */
+    /* transition-behavior: ; */
+    p{
+        margin-top: 1em;
+    }
+}
+section:hover{
+    box-shadow: 0 0 10px 0 gray;
+    border-radius: 10px;
+    color: rgb(49, 22, 167);
+    p{
+        text-decoration: underline;
+    }
+}
+footer{
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    padding-bottom: 1em;
+}
