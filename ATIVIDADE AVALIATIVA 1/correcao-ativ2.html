@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        :root{
+            --azulescuro: #08254F;
+            --azulclaro: #1b4583;
+        }
+        body{
+            background-color: var(--azulescuro);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        section:first-child{
+            max-width: 100%;
+            background-color: orange;
+            padding: 5em;
+        }
+        section:nth-child(2){
+            position: relative;
+            top: -50px;
+            background-color: #232a35;
+        }
+        section{
+            max-width: 80em;
+            color: white;
+            /* 
+               max-width auxilia na responsividade, fazendo com que 
+               não apareça barra de rolagem. 
+            */
+            margin: 0 auto;
+            /* O margin: 0 auto define uma margem automática para ambos os lados. */
+            gap: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            div{
+                border: 1px solid var(--azulclaro);
+                box-sizing: border-box;
+                padding: 2rem;
+                flex-basis: 34rem;
+                /* Define a largura de um elemento flex */
+            }
+            h2{
+                flex-basis: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quibusdam sed repudiandae, necessitatibus iusto blanditiis odit culpa. Odit assumenda debitis, cumque ducimus, sit ex porro a, fugiat inventore esse odio!</p>
+    </section>
+    <section>
+        <div>
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum error, vero in a ipsam minima neque sapiente, quam inventore incidunt laboriosam perferendis nam alias beatae delectus non quae! Dolor, aspernatur?</p>
+        </div>
+    </section>
+    <section>
+        <div>
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum error, vero in a ipsam minima neque sapiente, quam inventore incidunt laboriosam perferendis nam alias beatae delectus non quae! Dolor, aspernatur?</p>
+        </div>
+    </section>
+    <section>
+        <div>
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum error, vero in a ipsam minima neque sapiente, quam inventore incidunt laboriosam perferendis nam alias beatae delectus non quae! Dolor, aspernatur?</p>
+        </div>
+    </section>
+</body>
+</html>
