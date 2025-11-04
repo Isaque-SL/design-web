@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVSCRIPT - Introdução</title>
+</head>
+<body>
+
+    <script>
+        // document.getElementById("mensagem").innerHTML = "AAAAAAAA";
+        // DOM Modelo de documento do objeto
+    </script>
+
+    <p id="mensagem"></p>
+    <script>
+        /*
+        - javascript não é java (linguagem de programação lado servidor [backend])
+        - javascript é uma linguagem de prgoramação cliente, geralmente
+        - javascript é interpretada (diferente de executada)
+        - javascript é sensível à capitulação
+        - o desenvolvimento web é um tripé:
+            - html é a estrutura, conteúdo
+            - css é o estilo
+            - javascript é a interatividade, comportamento...
+        - pode ser: lado cliente, servidor mobile e desktop 
+        */
+
+        window.alert("Olá world!!!");
+        document.write("<p>document write yayyyy</p>");
+        document.getElementById("mensagem").innerHTML = "AAAAAAAA";
+        console.log("AAAAA MUNDO NO CONSOLEEEE");
+        // innerHTML irá incluir html no elemento com id...
+
+        /* VARIÁVEIS
+         NO JS as variáveis NÃO são fortemente tipadas
+         pode usar var, let ou const
+         var - declaração global
+         let - declaração local e mais ágil para o sistema
+         */
+        number = parseInt(prompt("Insira um número!"));
+        number2 = parseInt(prompt("Insira OUTRO número!"));
+        texto = "AbC";
+        console.log(number + number2);
+        console.log(number - number2);
+        console.log(number * number2);
+        console.log(number / number2);
+        console.log("Valor do primeiro número:");
+        console.log(++number); //incrementa antes
+        console.log(number++); //incrementa depois
+        console.log(number);
+
+        // OPERADORES RELACIONAIS
+
+        console.log(4 == 7);
+        console.log(4 <= 7);
+        console.log(4 >= 7);
+        console.log(4 != 7);
+        console.log(4 == 7 && 12 < 13);
+        console.log(true && false);
+        console.log(true || false);
+        console.log("3" === 3);
+        console.log("3" == 3);
+        console.log(123 == 2 || true);
+
+        for(var i = 0; i < 10; i++){
+            document.getElementById("mensagem").innerHTML = "AAAAAAAAAAAA";
+        };
+    </script>
+</body>
+</html>
