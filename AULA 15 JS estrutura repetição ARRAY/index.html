@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <style>
+        p{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Formulário de soma</h2>
+    <label for="n1">N1:</label>
+    <input type="text" id="n1">
+
+    <label for="n2">N2</label>
+    <input type="text" id="n2">
+    
+    <button id="somar"> SOMAR</button>
+    <p id="resultado"></p>
+    <p id="emocao"></p>
+
+    <script>
+
+        const somar = document.querySelector("#somar");
+        // seleciona a marcação com id somar
+        // const é um valor que não vai mudar; constante.
+        let emocoes =  ["(●'◡'●)", "(┬┬﹏┬┬)", "(ˉ﹃ˉ)", "(⊙_⊙;)"]
+        let a = Math.floor(Math.random() * emocoes.length);
+        
+        somar.addEventListener("click", function(e){
+            console.log("addEventListener");
+            n1 = parseInt(document.getElementById("n1").value);
+            // pegar o valor do input com id n1
+            n2 = parseInt(document.getElementById("n2").value);
+            resultado = n2 + n1;
+            console.log(n1 + n2);
+            document.getElementById("emocao").innerHTML = `<p> ${emocoes[a]} </p>`;
+            document.getElementById("resultado").innerHTML = resultado;
+            // switch(resultado){
+            //     case NaN: document.getElementById("resultado").innerHTML = "Valor Inválido";
+            //     default: document.getElementById("resultado").innerHTML = resultado;
+            // };
+            }
+        )
+    // ARRAYS - lista de itens
+
+    let alunos = [7, 6, 4, 8, 23, 1];
+    console.log(alunos[2]);
+    // irá exibir o número "6" porque o array começa com ÍNDICE 0
+    alunos.push(5);
+    alunos[3] = 0;
+    delete alunos[0];
+    console.log(alunos[0]);
+    console.log(alunos.length);
+
+    let items = ["Luis", "Maria", "Felipe", "Vinícius", "Thiago"];
+    console.log(items[1]);
+
+
+    console.log(Math.random());
+    // Math.random() - retorna um valor aleatorio entre 0 e 1
+    console.log(Math.floor(Math.random()));
+    console.log(a);
+    console.log(emocoes[a]);
+
+    // ESTRUTURA DE REPETIÇÃO
+
+    for(item in emocoes){
+        document.write(`<p> ${emocoes[item]} </p>`);
+    };
+    for(let nfor = 0 ; nfor <= emocoes.length - 1 ; nfor++){
+        document.write(`<p> ${emocoes[nfor]} </p>`)
+    }
+    </script>
+
+    <script>
+        // ESTRUTURA CONDICIONAL
+        let opcao = 0;
+        // let opcao = parseInt(prompt("Digite um número de 0 a 3"));
+        // parseInt converte para inteiro
+
+        switch(opcao){
+            case 0: console.log("Teste 1"); break;
+            case 1: console.log("teste 1"); break;
+            case 2: console.log("Teste 3"); break;
+            case 3: console.log("teste 4"); break;
+            default:
+                console.log("Teste default"); break
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>
