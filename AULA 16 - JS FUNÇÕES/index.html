@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT - FUNÇÕES</title>
+</head>
+<body>
+    <p id="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nobis asperiores ab non dolore adipisci reprehenderit necessitatibus, quam libero, cupiditate ex in suscipit excepturi rem a! Sint ullam temporibus eum.</p>
+    
+    <input type="color" id="cor">
+    <button onclick="mudarcor()">Mudar cor da página</button>
+    <button onclick="mudarsize()">Mudar tamanho da fonte</button>
+    <!-- <button id="btn2">BUTTON com eventListener</button> -->
+
+    <script>
+        let produtos = ["lapis", "tesoura", "borracha"];
+        produtos.forEach(function(item,i,lista){
+            console.log('Array com forEach: ${item}, ${i}, ${lista}');
+        })
+
+        function mudarcor(){
+            let cor = document.getElementById("cor").value;
+            document.body.style.backgroundColor = cor;
+        }
+        function mudarsize(){
+            let size = ["small", "large"]
+            op = prompt("Pequeno - 1, Grande - 2, Grandão - 3")
+            if (op == 1){
+                document.body.style.fontSize = "small";
+            }
+            else if(op == 2){
+                document.body.style.fontSize = "large";
+            }
+            else if(op == 3){
+                document.body.style.fontSize = "x-large";
+            }
+            else{
+                
+            }
+        }
+        // btn2 = document.getElementById("btn2");
+        // btn2.eventListener("click", function(){
+        //     console.log("sss")
+        //     let cor = document.getElementById("cor").value;
+        //     document.getElementById();
+        //     console.log("sss")
+        
+        // })
+
+        function somar(){
+            return 5+2846392865*23;
+        }
+        console.log(somar());
+
+        function somar2(num1, num2){
+            return num1 + num2;
+        }
+        console.log(somar2(5, 7));
+
+        function somar3(num1, num2, num3){
+            return num1 + num2 + num3;
+        }
+        console.log(somar3(5, 5, 5));
+
+        function somar4(num1, num2){
+            if(!isNaN(num1) && !isNaN(num2)){
+                // isNaN = is Not A Number / verifica se é o objeto não é um número. Caso não seja, retorna verdadeiro
+                return num1 + num2;
+            }
+            else{
+                return "Passe um número.";
+            }
+        }
+        console.log(somar4(5, 15));
+
+        function borda(cor, espessura){
+            document.body.style.borderColor = cor;
+            document.body.style.borderWidth = espessura+"rem";
+            document.body.style.borderStyle = "solid";
+        }
+        borda("blue", 0.1);
+        
+    </script>
+
+</body>
+</html>
