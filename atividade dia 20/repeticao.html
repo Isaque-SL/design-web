@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome Repetido!!</title>
+</head>
+<body>
+    <label for="palavra" class="remover">Escreva aqui</label>
+    <input type="text" id="palavra" class="remover">
+    <button id="repetir" class="remover">Enviar</button>
+    <script>
+        repetir.addEventListener("click", function(e){
+            let mensagem = document.getElementById("palavra").value;
+            document.body.innerHTML = "" // NÃO É BOA PRÁTICA!!!! só uma gambiarra que não seria aplicada num cenário profissional
+            for(i = 1; i < 6; i++){
+                let tamanho = `${i}rem`
+                const texto = document.createElement("p")
+                texto.style.fontSize = tamanho
+                texto.innerText = mensagem
+                document.body.appendChild(texto)
+            }
+        })
+    </script>
+</body>
+</html>

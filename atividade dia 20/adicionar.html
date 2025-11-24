@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add</title>
+    <style>
+        body{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 50px;
+            align-items: center;
+        }
+        button{
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="sub()">-</button>
+    <p id="resultado">0</p>
+    <button onclick="add()">+</button>
+
+    <script>
+        function add(){
+            let valor = parseInt(document.getElementById("resultado").innerText);
+            valor++;
+            document.getElementById("resultado").innerHTML = valor;
+        }
+        function sub(){
+            let valor = parseInt(document.getElementById("resultado").innerText);
+            valor--;
+            document.getElementById("resultado").innerHTML = valor;
+        }
+    </script>
+</body>
+</html>

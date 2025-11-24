@@ -23,16 +23,18 @@
         function mudar_cor(cor1, cor2, cor3){
             document.body.style.backgroundColor = `rgb(${cor1}, ${cor2}, ${cor3})`;
         }
-        
-        for(i = 0; i < 100; i++){
-            let red = Math.floor(Math.random() * 255)
-            let green = Math.floor(Math.random() * 255)
-            let blue = Math.floor(Math.random() * 255)
-            const botao = document.createElement("button")
-            botao.setAttribute("onclick", `mudar_cor(${red}, ${green}, ${blue})`)
-            botao.style = `background-color: rgb(${red}, ${green}, ${blue})`
-            document.body.appendChild(botao)
+        function botoes(){
+            for(i = 0; i < 100; i++){
+                let red = Math.floor(Math.random() * 255)
+                let green = Math.floor(Math.random() * 255)
+                let blue = Math.floor(Math.random() * 255)
+                const botao = document.createElement("button")
+                botao.setAttribute("onclick", `mudar_cor(${red}, ${green}, ${blue})`)
+                botao.style = `background-color: rgb(${red}, ${green}, ${blue})`
+                document.body.appendChild(botao)
+            }
         }
+        botoes()
     </script>
 </body>
 </html>

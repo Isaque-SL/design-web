@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que cor?</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        p{
+            font-size: 10rem;
+            margin: 100px 25px;
+            user-select: none;
+        }
+    </style>
+</head>
+<body onclick="mudar_cor()">
+    <p id="infoweb">INFOWEB</p>
+
+    <script>
+        function alea(){
+            return Math.floor(Math.random() * 255)
+        }
+        function mudar_cor(){
+            document.getElementById("infoweb").style.color = `rgb(${alea()}, ${alea()}, ${alea()})`
+        }
+        mudar_cor()
+        document.body.onclick(mudar_cor())
+    </script>
+</body>
+</html>
