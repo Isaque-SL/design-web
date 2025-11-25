@@ -16,6 +16,15 @@
             border: 1px solid white;
             border-radius: 100%;
         }
+        #mais{
+            position: fixed;
+            right: 0;
+        }
+        #MAIS{
+            position: fixed;
+            top: 100px;
+            right: 0;
+        }
     </style>
 </head>
 <body>
@@ -34,7 +43,19 @@
                 document.body.appendChild(botao)
             }
         }
+        function novo_botao(){
+            let red = Math.floor(Math.random() * 255)
+            let green = Math.floor(Math.random() * 255)
+            let blue = Math.floor(Math.random() * 255)
+            const botao = document.createElement("button")
+            botao.setAttribute("onclick", `mudar_cor(${red}, ${green}, ${blue})`)
+            botao.style = `background-color: rgb(${red}, ${green}, ${blue})`
+            document.body.appendChild(botao)
+        }
         botoes()
     </script>
+    <button id="mais" onclick="novo_botao()">Quer mais?</button>
+    <button id="MAIS" onclick="botoes()">Quer AINDA mais?</button>
+
 </body>
 </html>

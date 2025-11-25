@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nativos</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        p{
+            font-size: 10rem;
+        }
+        #data{
+            font-size: 5rem;
+        }
+    </style>
+</head>
+<body>
+    <p id="diahora"></p>
+
+    <p id="data"></p>
+    <script>
+        let nome = "INFOWEB";
+        console.log("Comprimento da string: "+nome.length)
+        console.log("Posição do caracter da string: "+nome.charAt(0))
+        console.log("Substitui strings: "+nome.replace("info", "INFORMÁTICA PARA "))
+        console.log("Divide a string: "+ nome.split("o")[0]);
+        console.log("MAIÚSCULAS: "+nome.toUpperCase())
+        console.log("minúsculas: "+nome.toLowerCase())
+        console.log(nome)
+        console.log("Remove Espaços: "+ nome.trim())
+        console.log("Concatena strings: "+ nome.concat(" IFRN"))
+        console.log("Remove espaços e concatena strings: : "+ nome.trim().concat(" IFRN"))
+
+        console.log("Valor de PI: "+ Math.PI);
+        let num = 54.3;
+        console.log("Arredonda SEMPRE para cima: " + Math.ceil(num))
+        console.log("Arredonda SEMPRE para baixo: "+ Math.floor(num))
+        console.log("Arredondamento padrão: "+ Math.round(num))
+        console.log("Número randômico: "+Math.random())
+        console.log("Número randômico: "+ Math.random()*100 )
+        console.log("Potência: "+Math.pow(2, 4))
+        console.log("Raiz quadrada: "+ Math.sqrt(9))
+
+        var data = new Date()
+        console.log("Dia de hoje: "+ data.getDate())
+        console.log("Dia da semana: "+ data.getDay())
+        console.log("Mês: "+ data.getFullYear())
+        console.log(data.getHours())
+        console.log(data.getMinutes())
+        const p = document.createElement("p");
+        // p.innerHTML = nome;
+        // p.style.color = "rgb(255, 0, 100)";
+        // p.style.fontSize = "10rem";
+        // document.body.appendChild(p)
+    
+        function hora(){
+            let d = new Date();
+            document.getElementById("diahora").innerHTML = d.getSeconds();
+        }
+
+        let dias = ["segunda", "terça", "quarta", "quinta", "sexta", "sábado", "domingo"]
+        console.log(`${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()}`)
+        console.log(`${dias[data.getDay() - 1]}, ${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()}`)
+        
+
+        function data_hora(){
+            data = new Date()
+            document.getElementById("data").innerHTML = `${dias[data.getDay() - 1]}, ${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()} - ${data.getHours()}:${data.getMinutes()}:${data.getSeconds()}`
+        }
+
+        function alea(){
+            return Math.floor(Math.random() * 255)
+        }
+
+        function new_color(){
+            document.getElementById("data").style.color = `rgb(${alea()}, ${alea()}, ${alea()})`
+        }
+
+        setInterval(data_hora, 1000)
+        setInterval(new_color, 1000)
+    </script>
+</body>
+</html>
