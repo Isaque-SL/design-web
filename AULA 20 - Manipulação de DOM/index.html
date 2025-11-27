@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body{
+            background-color: rgba(57, 57, 168, 0.849);
+        }
+        .destaque{
+            background-color: yellowgreen;
+        }
+        .trocarimagem{
+            position: fixed;
+            top: 50px;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ERRO DE SINTAXE : <p><span></p></span> -->
+    <span>SPAN 1</span>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn18-KAJ6QZw1E5WpApmiSIIPNlZhW4q-LTg&s" alt="">
+    <br>
+    <button class="trocarimagem">TROCAR IMAGEM</button>
+    <p class="texto"><i>DOM - <del>Modelo</del> de <ins>Objeto</ins> do Documento</i>
+         <span>Texto no SPAN</span></p>
+    <p id="paragrafocomid"></p>
+
+    <!-- É possível criar atributos personalizados e existem prefixos para trabalhar com eles -->
+    <ol quantidade="10" data-produtos="8">
+        <li>
+            item
+        </li>
+        <li>
+            item
+        </li>
+        <li>
+            item
+        </li>
+    </ol>
+
+    <ol>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eaque corporis, sed neque dicta, porro debitis nostrum distinctio, amet necessitatibus vitae earum ullam beatae eligendi cum asperiores unde? Harum, laborum!</li>
+        <li>Sunt suscipit alias iure ad, neque illum quisquam tempora dolorem vel aperiam officia nisi cumque quae ratione ducimus ex fuga quod exercitationem inventore! Ipsa animi neque molestias officiis vero consectetur.</li>
+        <li>Quasi quos omnis maxime magni sunt deleniti assumenda fuga, soluta corporis, quaerat quod veritatis nisi inventore ratione, fugiat a vel suscipit pariatur? Neque provident similique soluta, et nulla animi eos?</li>
+    </ol>
+
+    <script>
+        const pcomid = document.getElementById("paragrafocomid");
+        const pcomclass = document.querySelector(".texto span");
+        // o ElementById PEGA o OBJETO com ID EXATO
+        // o querySelector SELECIONA a TAG (como no CSS)
+
+        pcomclass.innerHTML = "<b>TEXTO</b> 2 PARA SPAN!"
+        pcomclass.style.backgroundColor = "blue";
+        document.querySelector(".texto span").style.fontSize = "1.1rem"
+        
+        // a marcação precisa ter uma class para adicionar mais 
+        document.querySelector(".texto").classList.add("destaque");
+        
+        // for(i = 0; i < 3; i++){
+        document.getElementsByTagName("li")[1].style.color = "white";
+        // }
+
+        console.log(document.getElementsByTagName("li").length)
+
+        const imagem = document.querySelector("img");
+
+        console.log(imagem.getAttribute("src"))
+
+        const trocarimagem = document.querySelector(".trocarimagem")
+
+        var x = true
+
+        let lista = ["https://images.tcdn.com.br/img/img_prod/1331950/quadro_paisagem_linda_visao_do_amanhecer_221_4_4640a74c3db4744f923ba5e3ff511863.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn18-KAJ6QZw1E5WpApmiSIIPNlZhW4q-LTg&s", "https://cdn.pixabay.com/photo/2025/03/21/21/22/roche-9485693_640.jpg"]
+        function trocar(){
+            if (x){
+                imagem.setAttribute("src", "https://images.tcdn.com.br/img/img_prod/1331950/quadro_paisagem_linda_visao_do_amanhecer_221_4_4640a74c3db4744f923ba5e3ff511863.jpg") 
+                imagem.setAttribute("width", "280px")
+
+            }
+            else{
+                imagem.setAttribute("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn18-KAJ6QZw1E5WpApmiSIIPNlZhW4q-LTg&s")
+            }
+            x = !x
+        }
+
+        trocarimagem.addEventListener("click", trocar)
+        // imagem.setAttribute("src", "https://images.tcdn.com.br/img/img_prod/1331950/quadro_paisagem_linda_visao_do_amanhecer_221_4_4640a74c3db4744f923ba5e3ff511863.jpg")
+    
+        const produtos = document.querySelector("ol");
+        console.log(produtos.getAttribute("quantidade"))
+        console.log(produtos.hasAttribute("quantidade")) //verifica se há esse atributo
+        console.log(produtos.dataset.produtos) //pega o valor que está em <ol data-produtos=""
+        console.log(produtos.getAttribute("quantidade") == 10)
+        console.log(produtos.attributes)
+        produtos.removeAttribute("quantidade")
+        console.log(produtos.attributes)
+
+        // console.log(imagem.getAttribute("src"))
+    
+    </script>
+
+</body>
+</html>
