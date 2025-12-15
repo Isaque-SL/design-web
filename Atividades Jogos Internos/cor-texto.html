@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cores?</title>
+    <style>
+        h1{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        span{
+            color: #0c3453;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="diatinf"><span>DIATINF</span> - A Melhor Diretoria</h1>
+    </header>
+    <main>
+        <div>
+            <h2>Lorem</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum eligendi magni, autem quo molestiae alias nisi iusto delectus nostrum quaerat fugit asperiores assumenda ullam saepe quibusdam dolorum veritatis cupiditate facere?</p>
+        </div>
+        <div>
+            <h2>Ipsum</h2>
+            <p>Dolorem laudantium voluptas recusandae voluptate similique exercitationem eum ullam eveniet libero dicta odit quas culpa minima magnam quidem nam nostrum nobis obcaecati tempora, incidunt doloremque, mollitia, expedita deserunt debitis? Accusamus?</p>
+        </div>
+        <div>
+            <h2>Dolor</h2>
+            <p>Dignissimos, id excepturi tempora nobis sequi beatae facere voluptatibus, labore sed soluta eius! Nisi dolore ipsum accusamus et eaque libero quod dolores, aperiam voluptas! Mollitia libero modi rem eos blanditiis!</p>
+        </div>
+        <div>
+            <h2>Sit</h2>
+            <p>Iste facere facilis consequatur distinctio commodi odit deleniti, nulla reiciendis nostrum consectetur obcaecati tenetur veritatis, a impedit illo. Consectetur est blanditiis consequuntur harum molestiae. Impedit eaque voluptates optio ab quia.</p>
+        </div>
+        <div>
+            <h2>Amet</h2>
+            <p>Eum quis tenetur nesciunt quas, repellat sint delectus laboriosam, similique enim ratione eveniet obcaecati architecto exercitationem ut quisquam at qui numquam? Sint delectus laudantium totam asperiores natus laboriosam ducimus autem!</p>
+        </div>
+    </main>
+
+    <script>
+        function alea(){
+            return Math.floor(Math.random() * 255)
+        }
+
+        function mudar_cor(id){
+            document.getElementById(id).style.color = `rgb(${alea()}, ${alea()}, ${alea()})`
+        }
+
+        setInterval(mudar_cor, 30000, "diatinf")
+    </script>
+
+</body>
+</html>
