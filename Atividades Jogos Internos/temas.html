@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="tema-1.css">
-    <link rel="stylesheet" href="tema-2.css">
-    <link rel="stylesheet" href="tema-3.css">
+
     <title>D&D</title>
 </head>
 <body>
     <header>
         <h1>Dungeons & Dragons - A velha nova tendência</h1>
         <p>O jogo de Roleplay e Aventura que atravessa universos e gerações</p>
+        <button>Claro</button>
+        <button onclick="tema_escuro">Escuro</button>
+        <button>Disco!</button>
     </header>
 
     <main>
@@ -32,5 +34,12 @@
             <p>Rem similique non facere quam provident? Quasi cupiditate modi culpa similique rem, animi id beatae saepe vero provident repellat repudiandae fuga eligendi magni atque itaque reiciendis perspiciatis voluptates. Dolore, recusandae?</p>
         </div>
     </main>
+
+
+    <script>
+        function tema_escuro(){
+            document.body.appendChild('<link rel="stylesheet" href="tema-2.css">')
+        }
+    </script>
 </body>
 </html>
