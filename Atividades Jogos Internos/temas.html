@@ -3,17 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="tema-1.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            width: 30em;
+        }
+        header{
+            
+        }
+        #claro, #escuro, #disco{
+            position: fixed;
+            right: 10px;
+        }
+        #claro{
+            top: 10px;
+        }
+        #escuro{
+            top: 40px;
+        }
+        #disco{
+            top: 70px;
+        }
+    </style>
 
     <title>D&D</title>
 </head>
 <body>
+    <link id="tema" rel="stylesheet" href="">
     <header>
         <h1>Dungeons & Dragons - A velha nova tendência</h1>
         <p>O jogo de Roleplay e Aventura que atravessa universos e gerações</p>
-        <button>Claro</button>
-        <button onclick="tema_escuro">Escuro</button>
-        <button>Disco!</button>
+        <button onclick="tema_claro()" id="claro">Claro</button>
+        <button onclick="tema_escuro()" id="escuro">Escuro</button>
+        <button onclick="tema_disco()" id="disco">Disco!</button>
     </header>
 
     <main>
@@ -38,7 +63,18 @@
 
     <script>
         function tema_escuro(){
-            document.body.appendChild('<link rel="stylesheet" href="tema-2.css">')
+            const tema = document.getElementById("tema")
+            tema.href = "tema-1.css"
+        }
+
+        function tema_claro(){
+            const tema = document.getElementById("tema")
+            tema.href = "tema-2.css"
+        }
+
+        function tema_disco(){
+            const tema = document.getElementById("tema")
+            tema.href = "tema-3.css"
         }
     </script>
 </body>

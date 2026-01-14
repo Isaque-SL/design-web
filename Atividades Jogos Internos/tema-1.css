@@ -1,17 +1,15 @@
 *{
     padding: 0;
     margin: 0;
+    color: white;
 }
 
 header{
-    display: flex;
-    flex-wrap: wrap;
-
     button{
-
+        color: black;
     }
 }
 
 body{
-
+    background-color: black;
 }
